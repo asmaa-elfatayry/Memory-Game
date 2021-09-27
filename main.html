@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <title>Memory Game</title>
+</head>
+<body>
+
+
+    <div class="control-game">
+        <span>Start Game</span>
+    </div>
+    <!-- section about user information and wrong answer -->
+    <div class="info-container">
+        <div class="name">
+            Hello: <span></span>
+            <span id="time">2:00</span>
+        </div>
+        <div class="try">
+            Wrong Tries: <span>0</span>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+    <!-- section of game container -->
+    <!-- 1 -->
+    <div class="game-container" >
+        <div class="game-block " data-emojies="sad">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/sad.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+    
+
+   
+        <div class="game-block "  data-emojies="sad">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/sad.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+    
+    <!-- 2 -->
+
+        <div class="game-block" data-emojies="smile">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/smile.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+
+
+        <div class="game-block" data-emojies="smile">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/smile.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+    
+    <!-- 3 -->
+
+ 
+        <div class="game-block" data-emojies="ton">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/tongue.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+
+        <div class="game-block" data-emojies="ton">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/tongue.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+
+    <!-- 4 -->
+
+        <div class="game-block" data-emojies="upset">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/upset.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+
+
+        <div class="game-block" data-emojies="upset">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/upset.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+
+    <!-- 5 -->
+
+        <div class="game-block" data-emojies="cry">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/cry.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+
+        <div class="game-block" data-emojies="cry">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/cry.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+
+    <!-- 6 -->
+
+        <div class="game-block" data-emojies="poo">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/poo.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+    
+
+        <div class="game-block" data-emojies="poo">
+            <div class="face front"></div>
+            <div class="face back">
+                <img src="/pic/poo.png" alt="Qustion-mark-photo">
+            </div>
+        </div>
+  
+<!-- 7 -->
+
+
+    <div class="game-block" data-emojies="sleep">
+        <div class="face front"></div>
+        <div class="face back">
+            <img src="/pic/sleep.png" alt="Qustion-mark-photo">
+        </div>
+    </div>
+
+    <div class="game-block" data-emojies="sleep">
+        <div class="face front"></div>
+        <div class="face back">
+            <img src="/pic/sleep.png" alt="Qustion-mark-photo">
+        </div>
+    </div>
+
+
+<!-- 8 -->
+
+    <div class="game-block" data-emojies="timy">
+        <div class="face front"></div>
+        <div class="face back">
+            <img src="/pic/timy.png" alt="Qustion-mark-photo">
+        </div>
+    </div>
+
+
+    <div class="game-block" data-emojies="timy">
+        <div class="face front"></div>
+        <div class="face back">
+            <img src="/pic/timy.png"  alt="Qustion-mark-photo">
+        </div>
+    </div>
+
+
+<!-- 9 -->
+
+    <div class="game-block" data-emojies="monkey">
+        <div class="face front"></div>
+        <div class="face back">
+            <img src="/pic/monkey.png" alt="Qustion-mark-photo">
+        </div>
+    </div>
+
+    <div class="game-block" data-emojies="monkey">
+        <div class="face front"></div>
+        <div class="face back">
+            <img src="/pic/monkey.png" alt="Qustion-mark-photo">
+        </div>
+    </div>
+
+<!-- 10 -->
+
+    <div class="game-block" data-emojies="good">
+        <div class="face front"></div>
+        <div class="face back">
+            <img src="/pic/good.png" alt="Qustion-mark-photo">
+        </div>
+    </div>
+
+    <div class="game-block" data-emojies="good">
+        <div class="face front"></div>
+        <div class="face back">
+            <img src="/pic/good.png" alt="Qustion-mark-photo">
+        </div>
+    </div>
+
+</div>
+<!-- sound -->
+<audio id="true" src="/audio/mixkit-arcade-game-complete-or-approved-mission-205.wav" preload="auto"></audio>
+<audio id="false" src="/audio/mixkit-negative-answer-lose-2032.wav" preload="auto"></audio>
+<audio id="start" src="/audio/Heartbreaking.mp3" preload="auto" loop></audio>
+<audio id="finalSec" src="/audio/lastseconds.wav" preload="auto"></audio>
+<script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/js.js"></script>
+</body>
+</html>
