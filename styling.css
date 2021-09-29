@@ -3,10 +3,13 @@
     font-family: tahoma,Arial, Helvetica, sans-serif;
 }
 body{
-    background-color:  #C7B18C;
+    background-color:  rgb(100 165 167);
 }
 
+
+
 /* start game will be delted after click */
+/* controls */
 .control-game{
     position: fixed;
     top: 0px;
@@ -14,7 +17,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.904);
+    background-color: #000000f5;
 }
 .control-game span{
     position: absolute;
@@ -29,17 +32,95 @@ body{
     border-radius: 8px;
     cursor: pointer;
 }
-/* controls */
+/* winner message */
+/* .winner{
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.904);
+} */
+
+.winner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #fff;
+    width: 350px;
+    background-color: #ffeb3b;
+    font-size: 30px;
+    color: #060606;
+    z-index: 2;
+    text-align: center;
+    display: none;
+    border-radius: 8px;
+    padding: 30px 15px;
+    line-height: 1.4em;
+}
+/* .winner span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    background-color: rgb(250, 148, 31);
+    padding: 15px 25px;
+    font-size: 35px;
+    display: none;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+
+} */
+
+/* .winner input{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    width: 120px;
+   font-weight: bold;
+    background-color: #fff;
+    color: rgb(250, 148, 31);
+    border: 1px solid rgb(250, 148, 31);
+    padding: 10px;
+    font-size: 22px;
+    cursor: pointer;
+} */
+.fail{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #fff;
+    width: 300px;
+       display: none;
+        background-color: #141212;
+        font-size: 30px;
+        color: firebrick;
+        z-index: 2;
+        text-align: center;
+        border-radius: 8px;
+        padding: 38px;
+       
+}
+.fail a{
+    color: rgb(193 187 108);
+}
 
 /* start name information */
 .info-container{
     width: 1080px;
+    color: #fff;
     margin: 20px auto 0;
-    background-color: #F4EBCE;
+    background-color: #121111c9;
     padding: 20px;
     font-size: 25px;
     overflow: hidden;
-    border: 2px solid #EAD7AD;
+    border: 2px solid  rgb(193 187 108) ;
 }
 .info-container .name{
     float: left;
@@ -80,7 +161,7 @@ body{
     pointer-events: none;
 }
 .game-container .game-block .front{
-    background-color:#765D69 ;
+    background-color:#363334 ;
     line-height: 200px;
 }
 .game-container .game-block .front::before{
@@ -91,12 +172,10 @@ body{
 }
 .game-container .game-block .back{
     transform: rotateY(180deg);
-    background-color: #A1897C;
+    background-color:#32403f ;
 }
 .game-container .game-block .back img{
-    width: 100%;
-    height: 100%;
-    margin-top: 30px;
+        margin-top: 15px;
 }
 .game-container .game-block .face{
     position: absolute;
@@ -104,7 +183,7 @@ body{
     height: 100%;
     text-align: center;
     backface-visibility: hidden;
-    border: 5px solid #EAD7AD;
+    border: 5px solid rgb(193 187 108) ;
 }
 .game-container .is-hover,
 .game-container .match{
@@ -118,15 +197,17 @@ body{
 
 /* Mobile screen responsive */
 @media (max-width:500px){
+
+    .control-game span{
+        font-size: 24px;
+    }
     /* start name information */
 .info-container{
-   width: 350px;
+   width: 337px;
     margin: 20px auto 0;
-    background-color: #F4EBCE;
     padding: 10px;
     font-size: 21px;
     overflow: hidden;
-    border: 2px solid #EAD7AD;
 }
 .info-container .name{
    float: none;
@@ -148,24 +229,26 @@ body{
 /* satrt game block */
 
 .game-container{
-    max-width: 380px;
+    max-width: 336px;
     margin: 30px auto;
 }
 .game-container .game-block{
-    height: 80px;
-    max-width: 75px;
-    float: 1 0 75px;
-    margin: 0px 10px 10px;
+    max-width: 70px;
+    height: 73px;
+    float: 1 0 70px;
+    margin: 0px 7px 10px;
 }
 .game-container .game-block .front{
-    line-height: 75px;
+    line-height: 73px;
 }
 .game-container .game-block .front::before{
-    font-size: 60px;
+    font-size: 55px;
 }
 
 .game-container .game-block .back img{
     margin-top: 0px;
+    width: 100%;
+    height: 100%;
 }
 }
 @media (max-width:680px) and (min-width:501px){
@@ -210,6 +293,8 @@ body{
 
 .game-container .game-block .back img{
     margin-top: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 }
@@ -218,11 +303,9 @@ body{
 .info-container{
     max-width: 640px;
     margin: 20px auto 0;
-    background-color: #F4EBCE;
     padding: 20px;
     font-size: 24px;
-    overflow: hidden;
-    border: 2px solid #EAD7AD;
+
 }
 
 
@@ -254,7 +337,6 @@ body{
     margin: 0px 10px 10px;
 }
 .game-container .game-block .front{
-    background-color:#765D69 ;
     line-height: 140px;
 }
 .game-container .game-block .front::before{
@@ -265,7 +347,7 @@ body{
 }
 .game-container .game-block .back{
     transform: rotateY(180deg);
-    background-color: #A1897C;
+
 }
 .game-container .game-block .back img{
     width: 100%;
