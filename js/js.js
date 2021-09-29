@@ -16,6 +16,7 @@ $('.control-game span').on("click",function(){
 
 })
 
+
 var timer=document.querySelector('#time');
 var counterMin=1;
 var counterSec=5;
@@ -65,10 +66,14 @@ var counterSec=5;
       }
      
    },1000)
-
 }
+$('.fail a').on("click" , function(e){
+    window.location.reload();
+$(this).preventDefault(e);
 
-let duration=700;
+})
+
+let duration=400;
 let blockContainer=document.querySelector('.game-container');
 let blocks=Array.from(blockContainer.children)
 
