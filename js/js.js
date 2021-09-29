@@ -73,7 +73,7 @@ $(this).preventDefault(e);
 
 })
 
-let duration=400;
+let duration=500;
 let blockContainer=document.querySelector('.game-container');
 let blocks=Array.from(blockContainer.children)
 
@@ -86,7 +86,7 @@ shuffle(orderRange); //to rearrange array
 blocks.forEach((block,index)=>{
     block.style.order=orderRange[index];
     // add event click
-   $(block).click(function(){
+   $(block).on("click",function(){
        flip(block);
    })
 })
@@ -134,7 +134,7 @@ if(counterWinner==10){
     $('.control-game').css("display","block");
     $('.fail').css("display","none");
     $('.winner').css("display","block");
-   $('.winner .green').html("<span style='color:green;font-weight: bold;'>congratulations <img src='/pic/confetti.png' /></span> "+ $('.name span:first').text()+", You have a good memory.");
+   $('.winner .green').html("<span style='color:green;font-weight: bold;'>congratulations <img src='./pic/confetti.png' /></span> "+ $('.name span:first').text()+", You have a good memory.");
    }
 
 }
